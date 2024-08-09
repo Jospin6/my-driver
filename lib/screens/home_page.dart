@@ -17,6 +17,11 @@ class _MyHomePageState extends State<MyHomePage> {
       appBar: AppBar(
         automaticallyImplyLeading: false,
         backgroundColor: Colors.blue,
+        leading: IconButton(
+          onPressed: (){
+            Scaffold.of(context).openDrawer();
+          }, 
+          icon: const Icon(Icons.menu)),
         title: Text(
           widget.title,
           style:
@@ -30,6 +35,23 @@ class _MyHomePageState extends State<MyHomePage> {
           )
         ],
       ),
+
+      drawer: Drawer(
+        child: ListView(
+          children: [
+            SizedBox(
+              height: 150,
+              width: MediaQuery.of(context).size.width,
+              child: const DrawerHeader(
+                decoration: BoxDecoration(
+                  color: Colors.blue
+                ),
+                child: Text("Mon Chauffeur", style: TextStyle(color: Colors.white, fontSize: 20),)),
+            )
+          ],
+        ),
+      ),
+
       body: const Stack(
         children: [
             Text("my home page")
