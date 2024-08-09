@@ -47,7 +47,31 @@ class _MyHomePageState extends State<MyHomePage> {
                   color: Colors.blue
                 ),
                 child: Text("Mon Chauffeur", style: TextStyle(color: Colors.white, fontSize: 20),)),
-            )
+            ),
+            ListTile(
+              title: const Text("Home"),
+              onTap: () {
+                
+              },
+            ),
+            ListTile(
+              title: const Text("Notifications"),
+              onTap: () {
+                
+              },
+            ),
+            ListTile(
+              title: const Text("Mes courses"),
+              onTap: () {
+                
+              },
+            ),
+            ListTile(
+              title: const Text("Mes courses"),
+              onTap: () {
+                
+              },
+            ),
           ],
         ),
       ),
